@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta name="google" content="notranslate" />
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./css/assets/X-icon.png">
+    <link href="./css/assets/X-icon.png" rel="icon">
+
+    <link rel="stylesheet" href="">
+
+
+    <link href="css/main.550dcf66.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSalary - Results</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script defer src="js/results.js"></script>
+
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default active">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html" title="">
+                    <img src="Images/logo.png" height ="80em" class="navbar-logo-img" alt="">
+                    XSalary
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home.html" title="">Home</a></li>
+                    <li><a href="profile.html" title="">Future Salary</a></li>
+                    <li><a href="personality.html" title="">Personality Test</a></li>
+                    <li>
+                        <p>
+                            <!-- <a href="profile.html" class="btn btn-default navbar-btn" title="">Start journey</a> -->
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="hero-full-container background-image-container white-text-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Results</h1>
+                <p>You have made this far. Nicely done! Now you can get to the results. It's a good chance to get a careers support.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section-container" style="background-image: url(Images/MainBG.jpg);
+    background-size: cover;
+    /*background-size: contain;*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px;  /* Optional: adds some spacing inside the main content */
+    color: #333; ">
+        <div class="container text-center">
+            <div class="row section-container-spacer">
+                <div class="col-xs-12 col-md-12 main">
+                    <h2>Analysis Results</h2>
+                    <div id="results-section">
+                        <p>
+                            <strong>Selected Industry:</strong>
+                            <span id="industry-display">Loading...</span>
+                        </p>
+                        <p>
+                            <strong>Your Expected Salary(weekly):</strong>
+                            $<span id="expected-salary-display">0.00</span>
+                        </p>
+                        <p>
+                            <strong>Average Weekly Salary in the Industry:</strong>
+                            $<span id="average-salary-display">0.00</span>
+                        </p>
+                        <p>
+                            <strong>Difference:</strong>
+                            $<span id="difference-display">0.00</span>
+                        </p>
+
+                        <p id="feedback">Calculating...</p>
+
+                        <a href="profile.html" class="btn btn-default" style = "background-color:blue" title="1">Try Again</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+
+<div class="section-container" style="background-image: url(Images/MainBG.jpg);
+    background-size: cover;
+    /*background-size: contain;*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px;  /* Optional: adds some spacing inside the main content */
+    color: #333;">
+    <div class="container text-center">
+        <div class="row section-container-spacer">
+            <div class="col-xs-12 col-md-12">
+
+                <h3 style="font-size: 26px;">Dashboard</h3>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <h4 style="display: inline-block"><b>Salary Range</b></h4>
+                <img id="industryImage1" src="" alt="Industry Related Image 1" width="530" class="img-responsive reveal-content image-center">
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+                <h4 style="display: inline-block"><b>Salary Trends</b></h4>
+                <p>This line bar chart interaction map help you learn the salary trend and employment situation in recent years, on each point of line chart or bar chart will find the detail values.</p>
+                <img id="industryImage2" src="" alt="Industry Related Image 2" width="500" class="img-responsive reveal-content image-center">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const industry = localStorage.getItem("industry");  // assuming you've stored the selected industry in localStorage
+
+    function setImageBasedOnIndustry(industry) {
+    const imageElement1 = document.getElementById("industryImage1");
+    const imageElement2 = document.getElementById("industryImage2");
+
+    switch (industry) {
+    case "Mining":
+    imageElement1.src = "Images/Mining1.png";
+    imageElement2.src = "Images/Mining2.png";
+    break;
+
+    case "Manufacturing":
+    imageElement1.src = "Images/Manufacturing1.png";
+    imageElement2.src = "Images/Manufacturing2.png";
+    break;
+
+    case "Electricity, Gas, Water & Waste services":
+    imageElement1.src = "Images/Electricity, Gas, Water & Waste services1.png";
+    imageElement2.src = "Images/Electricity, Gas, Water & Waste services2.png";
+    break;
+
+    case "Construction":
+    imageElement1.src = "Images/Construction1.png";
+    imageElement2.src = "Images/Construction2.png";
+    break;
+
+    case "Wholesale Trade":
+    imageElement1.src = "Images/Wholesale Trade1.png";
+    imageElement2.src = "Images/Wholesale Trade2.png";
+    break;
+
+    case "Retail Trade":
+    imageElement1.src = "Images/Retail Trade1.png";
+    imageElement2.src = "Images/Retail Trade2.png";
+    break;
+
+    case "Accommodation & Food Services":
+    imageElement1.src = "Images/Accommodation & Food Services1.png";
+    imageElement2.src = "Images/Accommodation & Food Services2.png";
+    break;
+
+    case "Transport, Postal & Warehousing":
+    imageElement1.src = "Images/Transport, Postal & Warehousing1.png";
+    imageElement2.src = "Images/Transport, Postal & Warehousing2.png";
+    break;
+
+    case "Information Media & Telecommunications":
+    imageElement1.src = "Images/Information Media & Telecommunications1.png";
+    imageElement2.src = "Images/Information Media & Telecommunications2.png";
+    break;
+
+    case "Financial & Insurance Services":
+    imageElement1.src = "Images/Financial & Insurance Services1.png";
+    imageElement2.src = "Images/Financial & Insurance Services2.png";
+    break;
+
+    case "Rental, Hiring & Real Estate Services":
+    imageElement1.src = "Images/Rental, Hiring & Real Estate Services1.png";
+    imageElement2.src = "Images/Rental, Hiring & Real Estate Services2.png";
+    break;
+
+    case "Professional, Scientific & Technical Services":
+    imageElement1.src = "Images/Professional, Scientific & Technical Services1.png";
+    imageElement2.src = "Images/Professional, Scientific & Technical Services2.png";
+    break;
+
+    case "Administrative & Support Services":
+    imageElement1.src = "Images/Administrative & Support Services1.png";
+    imageElement2.src = "Images/Administrative & Support Services2.png";
+    break;
+
+    case "Public Administration & Safety":
+    imageElement1.src = "Images/Public Administration & Safety1.png";
+    imageElement2.src = "Images/Public Administration & Safety2.png";
+    break;
+
+    case "Education & Training":
+    imageElement1.src = "Images/Education & Training1.png";
+    imageElement2.src = "Images/Education & Training2.png";
+    break;
+
+    case "Health Care & Social Assistance":
+    imageElement1.src = "Images/Health Care & Social Assistance1.png";
+    imageElement2.src = "Images/Health Care & Social Assistance2.png";
+    break;
+
+    case "Arts & Recreation Services":
+    imageElement1.src = "Images/Arts & Recreation Services1.png";
+    imageElement2.src = "Images/Arts & Recreation Services2.png";
+    break;
+
+    case "Other Services":
+    imageElement1.src = "Images/Other Services1.png";
+    imageElement2.src = "Images/Other Services2.png";
+    break;
+    //... Add cases for each industry...
+
+    default:
+    // Optional: You can have default images in case the industry doesn't match any of the cases
+    imageElement1.src = "Images/default1.png";
+    imageElement2.src = "Images/default2.png";
+    break;
+    }
+    }
+
+    // When the page loads, update the images based on the industry
+    setImageBasedOnIndustry(industry);
+</script>
+
+<div class="section-container">
+    <div class="container text-center">
+        <div class="row section-container-spacer">
+            <div class="col-xs-12 col-md-12">
+                <h3 class="text-center">Average Salary Level Each State Australia Wide Map</h3>
+                <p>This Australia interaction map help you to understand each state salary in each industry based on open data from ABS website.<br>When you click on each state icon cycle, then will find the salary.</p>
+                <iframe id="industryIframe" width="1000" height="610"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const industry = localStorage.getItem("industry"); // Assuming the selected industry is stored in localStorage
+        const industryIframe = document.getElementById("industryIframe");
+        industryIframe.src = `maps/${industry}.html`;
+    });
+</script>
+
+<div class="section-container">
+    <div class="container text-center">
+        <div class="row section-container-spacer">
+            <div class="col-xs-12 col-md-12">
+                <h3 class="text-center">Future salary prediction based on machine learning model<br>Coming soon(we hope!)</h3>
+                <p>We create a predictive model to forecast future salary and give strategic report. Just play around with the retro style terminal by typing in commands.<br>However, currently the algorithm can only be executed in python.</p>
+                <iframe src="terminal.html" width="100%" height="610"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section-container">
+    <div class="container text-center">
+        <div class="row section-container-spacer">
+            <div class="col-xs-12 col-md-12">
+                <h3 class="text-center">Another UI/UX design choice for prediction</h3>
+                <iframe src="prediction.html" width="100%" height="610"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <footer class="footer-container white-text-container">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-xs-12">
+                        <h3>XSalary</h3>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-7">
+                                <p><small> &copy; 2023 IDers(TP22). All rights reserved. </small>
+                                </p>
+                            </div>
+                            <div class="col-xs-12 col-sm-5">
+                                <p class="text-right">
+                                    <a href="https://facebook.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="https://twitter.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function (event) {
+                navbarFixedTopAnimation();
+            });
+        </script>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function (event) {
+                navActivePage();
+                scrollRevelation('.reveal');
+            });
+        </script>
+        <script type="text/javascript" src="js/main.0cf8b554.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP Interactive Terminal</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: "Courier New", monospace;
+            background-color: black;
+            color: lime;
+            padding: 10px;
+        }
+
+        #terminal {
+            height: 500px;
+            overflow-y: scroll;
+            padding: 10px;
+            border: 1px solid lime;
+        }
+
+        #user_input {
+            width: 100%;
+            color: lime;
+            background-color: black;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+<div id="Demo terminal">
+    <img src="./Images/DEMO prediction.png" alt="Demo" width="1200">
+</div>
+<div id="terminal"></div>
+<input type="text" id="user_input" placeholder="Enter command...">
+
+<script>
+    $("#user_input").on('keydown', function(e) {
+        if (e.which == 13) {  // Enter key
+            e.preventDefault();
+            var user_input = $(this).val();
+            $("#terminal").append("> " + user_input + "\n");
+            
+            if (user_input == "fetch data") {
+                $.get("yearly.php", function(data) {
+                    $("#terminal").append(data + "\n");
+                    $("#terminal").scrollTop($("#terminal")[0].scrollHeight);
+                });
+            } else {
+                // Handle other commands here
+                $("#terminal").append("Unknown command: " + user_input + "\n");
+            }
+
+            $("#user_input").val('');
+        }
+    });
+</script>
+
+</body>
+</html>
