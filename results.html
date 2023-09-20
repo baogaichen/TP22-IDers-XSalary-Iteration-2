@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,43 +71,43 @@
     </div>
 </div>
 
-    <div class="section-container" style="background-image: url(Images/MainBG.jpg);
+<div class="section-container" style="background-image: url(Images/MainBG.jpg);
     background-size: cover;
     /*background-size: contain;*/
     background-repeat: no-repeat;
     background-position: center center;
     padding: 20px;  /* Optional: adds some spacing inside the main content */
     color: #333; ">
-        <div class="container text-center">
-            <div class="row section-container-spacer">
-                <div class="col-xs-12 col-md-12 main">
-                    <h2>Analysis Results</h2>
-                    <div id="results-section">
-                        <p>
-                            <strong>Selected Industry:</strong>
-                            <span id="industry-display">Loading...</span>
-                        </p>
-                        <p>
-                            <strong>Your Expected Salary(weekly):</strong>
-                            $<span id="expected-salary-display">0.00</span>
-                        </p>
-                        <p>
-                            <strong>Average Weekly Salary in the Industry:</strong>
-                            $<span id="average-salary-display">0.00</span>
-                        </p>
-                        <p>
-                            <strong>Difference:</strong>
-                            $<span id="difference-display">0.00</span>
-                        </p>
+    <div class="container text-center">
+        <div class="row section-container-spacer">
+            <div class="col-xs-12 col-md-12 main">
+                <h2>Analysis Results</h2>
+                <div id="results-section">
+                    <p>
+                        <strong>Selected Industry:</strong>
+                        <span id="industry-display">Loading...</span>
+                    </p>
+                    <p>
+                        <strong>Your Expected Salary(weekly):</strong>
+                        $<span id="expected-salary-display">0.00</span>
+                    </p>
+                    <p>
+                        <strong>Average Weekly Salary in the Industry:</strong>
+                        $<span id="average-salary-display">0.00</span>
+                    </p>
+                    <p>
+                        <strong>Difference:</strong>
+                        $<span id="difference-display">0.00</span>
+                    </p>
 
-                        <p id="feedback">Calculating...</p>
+                    <p id="feedback">Calculating...</p>
 
-                        <a href="profile.html" class="btn btn-default" style = "background-color:blue" title="1">Try Again</a>
-                    </div>
-                </div>
+                    <a href="profile.html" class="btn btn-default" style = "background-color:blue" title="1">Try Again</a>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
 
 
@@ -145,110 +146,110 @@
 </div>
 
 <script>
-const industry = localStorage.getItem("industry");  // assuming you've stored the selected industry in localStorage
+    const industry = localStorage.getItem("industry");  // assuming you've stored the selected industry in localStorage
 
     function setImageBasedOnIndustry(industry) {
-    const imageElement1 = document.getElementById("industryImage1");
-    const imageElement2 = document.getElementById("industryImage2");
+        const imageElement1 = document.getElementById("industryImage1");
+        const imageElement2 = document.getElementById("industryImage2");
 
-    switch (industry) {
-    case "Mining":
-    imageElement1.src = "Images/Mining1.png";
-    imageElement2.src = "Images/Mining2.png";
-    break;
+        switch (industry) {
+            case "Mining":
+                imageElement1.src = "Images/Mining1.png";
+                imageElement2.src = "Images/Mining2.png";
+                break;
 
-    case "Manufacturing":
-    imageElement1.src = "Images/Manufacturing1.png";
-    imageElement2.src = "Images/Manufacturing2.png";
-    break;
+            case "Manufacturing":
+                imageElement1.src = "Images/Manufacturing1.png";
+                imageElement2.src = "Images/Manufacturing2.png";
+                break;
 
-    case "Electricity, Gas, Water & Waste services":
-    imageElement1.src = "Images/Electricity, Gas, Water & Waste services1.png";
-    imageElement2.src = "Images/Electricity, Gas, Water & Waste services2.png";
-    break;
+            case "Electricity, Gas, Water & Waste services":
+                imageElement1.src = "Images/Electricity, Gas, Water & Waste services1.png";
+                imageElement2.src = "Images/Electricity, Gas, Water & Waste services2.png";
+                break;
 
-    case "Construction":
-    imageElement1.src = "Images/Construction1.png";
-    imageElement2.src = "Images/Construction2.png";
-    break;
+            case "Construction":
+                imageElement1.src = "Images/Construction1.png";
+                imageElement2.src = "Images/Construction2.png";
+                break;
 
-    case "Wholesale Trade":
-    imageElement1.src = "Images/Wholesale Trade1.png";
-    imageElement2.src = "Images/Wholesale Trade2.png";
-    break;
+            case "Wholesale Trade":
+                imageElement1.src = "Images/Wholesale Trade1.png";
+                imageElement2.src = "Images/Wholesale Trade2.png";
+                break;
 
-    case "Retail Trade":
-    imageElement1.src = "Images/Retail Trade1.png";
-    imageElement2.src = "Images/Retail Trade2.png";
-    break;
+            case "Retail Trade":
+                imageElement1.src = "Images/Retail Trade1.png";
+                imageElement2.src = "Images/Retail Trade2.png";
+                break;
 
-    case "Accommodation & Food Services":
-    imageElement1.src = "Images/Accommodation & Food Services1.png";
-    imageElement2.src = "Images/Accommodation & Food Services2.png";
-    break;
+            case "Accommodation & Food Services":
+                imageElement1.src = "Images/Accommodation & Food Services1.png";
+                imageElement2.src = "Images/Accommodation & Food Services2.png";
+                break;
 
-    case "Transport, Postal & Warehousing":
-    imageElement1.src = "Images/Transport, Postal & Warehousing1.png";
-    imageElement2.src = "Images/Transport, Postal & Warehousing2.png";
-    break;
+            case "Transport, Postal & Warehousing":
+                imageElement1.src = "Images/Transport, Postal & Warehousing1.png";
+                imageElement2.src = "Images/Transport, Postal & Warehousing2.png";
+                break;
 
-    case "Information Media & Telecommunications":
-    imageElement1.src = "Images/Information Media & Telecommunications1.png";
-    imageElement2.src = "Images/Information Media & Telecommunications2.png";
-    break;
+            case "Information Media & Telecommunications":
+                imageElement1.src = "Images/Information Media & Telecommunications1.png";
+                imageElement2.src = "Images/Information Media & Telecommunications2.png";
+                break;
 
-    case "Financial & Insurance Services":
-    imageElement1.src = "Images/Financial & Insurance Services1.png";
-    imageElement2.src = "Images/Financial & Insurance Services2.png";
-    break;
+            case "Financial & Insurance Services":
+                imageElement1.src = "Images/Financial & Insurance Services1.png";
+                imageElement2.src = "Images/Financial & Insurance Services2.png";
+                break;
 
-    case "Rental, Hiring & Real Estate Services":
-    imageElement1.src = "Images/Rental, Hiring & Real Estate Services1.png";
-    imageElement2.src = "Images/Rental, Hiring & Real Estate Services2.png";
-    break;
+            case "Rental, Hiring & Real Estate Services":
+                imageElement1.src = "Images/Rental, Hiring & Real Estate Services1.png";
+                imageElement2.src = "Images/Rental, Hiring & Real Estate Services2.png";
+                break;
 
-    case "Professional, Scientific & Technical Services":
-    imageElement1.src = "Images/Professional, Scientific & Technical Services1.png";
-    imageElement2.src = "Images/Professional, Scientific & Technical Services2.png";
-    break;
+            case "Professional, Scientific & Technical Services":
+                imageElement1.src = "Images/Professional, Scientific & Technical Services1.png";
+                imageElement2.src = "Images/Professional, Scientific & Technical Services2.png";
+                break;
 
-    case "Administrative & Support Services":
-    imageElement1.src = "Images/Administrative & Support Services1.png";
-    imageElement2.src = "Images/Administrative & Support Services2.png";
-    break;
+            case "Administrative & Support Services":
+                imageElement1.src = "Images/Administrative & Support Services1.png";
+                imageElement2.src = "Images/Administrative & Support Services2.png";
+                break;
 
-    case "Public Administration & Safety":
-    imageElement1.src = "Images/Public Administration & Safety1.png";
-    imageElement2.src = "Images/Public Administration & Safety2.png";
-    break;
+            case "Public Administration & Safety":
+                imageElement1.src = "Images/Public Administration & Safety1.png";
+                imageElement2.src = "Images/Public Administration & Safety2.png";
+                break;
 
-    case "Education & Training":
-    imageElement1.src = "Images/Education & Training1.png";
-    imageElement2.src = "Images/Education & Training2.png";
-    break;
+            case "Education & Training":
+                imageElement1.src = "Images/Education & Training1.png";
+                imageElement2.src = "Images/Education & Training2.png";
+                break;
 
-    case "Health Care & Social Assistance":
-    imageElement1.src = "Images/Health Care & Social Assistance1.png";
-    imageElement2.src = "Images/Health Care & Social Assistance2.png";
-    break;
+            case "Health Care & Social Assistance":
+                imageElement1.src = "Images/Health Care & Social Assistance1.png";
+                imageElement2.src = "Images/Health Care & Social Assistance2.png";
+                break;
 
-    case "Arts & Recreation Services":
-    imageElement1.src = "Images/Arts & Recreation Services1.png";
-    imageElement2.src = "Images/Arts & Recreation Services2.png";
-    break;
+            case "Arts & Recreation Services":
+                imageElement1.src = "Images/Arts & Recreation Services1.png";
+                imageElement2.src = "Images/Arts & Recreation Services2.png";
+                break;
 
-    case "Other Services":
-    imageElement1.src = "Images/Other Services1.png";
-    imageElement2.src = "Images/Other Services2.png";
-    break;
-    //... Add cases for each industry...
+            case "Other Services":
+                imageElement1.src = "Images/Other Services1.png";
+                imageElement2.src = "Images/Other Services2.png";
+                break;
+            //... Add cases for each industry...
 
-    default:
-    // Optional: You can have default images in case the industry doesn't match any of the cases
-    imageElement1.src = "Images/default1.png";
-    imageElement2.src = "Images/default2.png";
-    break;
-    }
+            default:
+                // Optional: You can have default images in case the industry doesn't match any of the cases
+                imageElement1.src = "Images/default1.png";
+                imageElement2.src = "Images/default2.png";
+                break;
+        }
     }
 
     // When the page loads, update the images based on the industry
@@ -280,72 +281,179 @@ const industry = localStorage.getItem("industry");  // assuming you've stored th
     <div class="container text-center">
         <div class="row section-container-spacer">
             <div class="col-xs-12 col-md-12">
-                <h3 class="text-center">Future salary prediction based on machine learning model<br>Coming soon(we hope!)</h3>
-                <p>We create a predictive model to forecast future salary and give strategic report. Just play around with the retro style terminal by typing in commands.<br>However, currently the algorithm can only be executed in python.</p>
-                <iframe src="terminal.html" width="100%" height="610"></iframe>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="section-container">
-    <div class="container text-center">
-        <div class="row section-container-spacer">
-            <div class="col-xs-12 col-md-12">
-                <h3 class="text-center">Another UI/UX design choice for prediction</h3>
-                <iframe src="prediction.html" width="100%" height="610"></iframe>
+                <h3 class="text-center">Future salary prediction based on machine learning model</h3>
+                <p>We create a predictive model to forecast future salary and give strategic report.<br>The data we use has up to 100,000 records. The accuracy of our prediction is assured!</p>
+                <!-- Input Form -->
+                <form id="inputForm">
+                    <label for="gender">Gender:</label>
+                    <select id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+
+                    <label for="industry">Industry:</label>
+                    <select id="industry">
+                        <option value="Mining">Mining</option>
+                        <option value="Manufacturing">Manufacturing</option>
+                        <option value="Electricity, gas, water & waste services">Electricity, Gas, Water & Waste services</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Wholesale trade">Wholesale Trade</option>
+                        <option value="Retail trade">Retail Trade</option>
+                        <option value="Accommodation & food services">Accommodation & Food Services</option>
+                        <option value="Transport, postal & warehousing">Transport, Postal & Warehousing</option>
+                        <option value="Information media & telecommunications">Information Media & Telecommunications</option>
+                        <option value="Financial & insurance services">Financial & Insurance Services</option>
+                        <option value="Rental, hiring & real estate services">Rental, Hiring & Real Estate Services</option>
+                        <option value="Professional, scientific & technical services">Professional, Scientific & Technical Services</option>
+                        <option value="Administrative & support services">Administrative & Support Services</option>
+                        <option value="Public administration & safety">Public Administration & Safety</option>
+                        <option value="Education & training">Education & Training</option>
+                        <option value="Health Care & Social Assistance">Health Care & Social Assistance</option>
+                        <option value="Arts & recreation services">Arts & Recreation Services</option>
+                        <option value="Other services">Other Services</option>
+                        <!-- Add other industries if required -->
+                    </select>
+
+                    <label for="state">State:</label>
+                    <select id="state">
+                        <option value="NSW">NSW</option>
+                        <option value="VIC">VIC</option>
+                        <option value="QLD">QLD</option>
+                        <option value="SA">SA</option>
+                        <option value="WA">WA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="NT">NT</option>
+                        <option value="ACT">ACT</option>
+                        <!-- Add other states if required -->
+                    </select>
+
+                    <label for="year">Year(2023-2030):</label>
+                    <input type="number" id="year" placeholder="2023" min="2023" max="2030">
+
+                    <div><input type="button" class="btn btn-info" value="Get Recommendation" onclick="getRecommendation()"></div>
+                </form>
+
+                <p></p>
+
+                <div id="results">
+                    <p><strong>Final Income:</strong> <span id="finalIncome"></span></p>
+                    <p><strong>Recommendation:</strong> <span id="recommendation"></span></p>
+                </div>
+
+                <script>
+                    let data = [];
+
+                    // Fetch CSV data from the given path
+                    fetch("./Data/final_predicted_incomes_with_recommendation_2023_to_2030.csv")
+                        .then(response => response.text())
+                        .then(parseCSV)
+                        .then(parsedData => {
+                            data = parsedData;
+                        })
+                        .catch(error => console.error("Failed to fetch and parse CSV:", error));
+
+                    function parseCSV(csvString) {
+                        const rows = csvString.trim().split("\n");
+                        const headers = rows[0].split(",").map(cell => cell.trim());
+                        return rows.slice(1).map(rowString => {
+                            const row = [];
+                            let startOfCell = 0;
+                            let inQuotes = false;
+                            for (let i = 0; i < rowString.length; i++) {
+                                if (rowString[i] === '"') {
+                                    inQuotes = !inQuotes;
+                                }
+                                if (i === rowString.length - 1 || (!inQuotes && rowString[i] === ',')) {
+                                    let cell = rowString.substring(startOfCell, i === rowString.length - 1 ? undefined : i).trim();
+                                    if (cell.startsWith('"') && cell.endsWith('"')) {
+                                        cell = cell.slice(1, -1);
+                                    }
+                                    row.push(cell);
+                                    startOfCell = i + 1;
+                                }
+                            }
+                            return headers.reduce((memo, header, index) => {
+                                memo[header] = row[index];
+                                return memo;
+                            }, {});
+                        });
+                    }
+
+                    function getRecommendation() {
+                        const genderValue = document.getElementById('gender').value;
+                        const industryValue = document.getElementById('industry').value;
+                        const stateValue = document.getElementById('state').value;
+                        const yearValue = parseInt(document.getElementById('year').value);
+
+                        const result = data.find(d => d.gender === genderValue && d.industry === industryValue && d.state === stateValue && d.year == yearValue);
+
+                        if (result) {
+                            document.getElementById('finalIncome').textContent = parseFloat(result.final_income).toFixed(2);
+                            document.getElementById('recommendation').textContent = result.recommendation;
+                        } else {
+                            alert('No data found for the selected inputs.');
+                        }
+                    }
+                </script>
+                <p>However, currently the web application only have basic prediction function for future salary.<br>For full features of the prediction, you can download the small 'XSprediction' application below.<br>Just play around with the retro style terminal by typing in commands.<br><b>Have fun!</b></p>
+                <a class="btn btn-primary btn-lg" href="XSprediction.zip" download="XSprediction.zip">Download the XSprediction app!</a>
+                <img src="./Images/XSprediction.png" alt="Description of Image" width="900" height="600">
             </div>
         </div>
     </div>
 </div>
 
 
-        <footer class="footer-container white-text-container">
-            <div class="container">
+
+
+
+<footer class="footer-container white-text-container">
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-xs-12">
+                <h3>XSalary</h3>
+
                 <div class="row">
-
-
-                    <div class="col-xs-12">
-                        <h3>XSalary</h3>
-
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-7">
-                                <p><small> &copy; 2023 IDers(TP22). All rights reserved. </small>
-                                </p>
-                            </div>
-                            <div class="col-xs-12 col-sm-5">
-                                <p class="text-right">
-                                    <a href="https://facebook.com/" class="social-round-icon white-round-icon fa-icon" title="">
-                                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="https://twitter.com/" class="social-round-icon white-round-icon fa-icon" title="">
-                                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="https://www.linkedin.com/" class="social-round-icon white-round-icon fa-icon" title="">
-                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-
-
+                    <div class="col-xs-12 col-sm-7">
+                        <p><small> &copy; 2023 IDers(TP22). All rights reserved. </small>
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-5">
+                        <p class="text-right">
+                            <a href="https://facebook.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://twitter.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/" class="social-round-icon white-round-icon fa-icon" title="">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </p>
                     </div>
                 </div>
+
+
             </div>
-        </footer>
+        </div>
+    </div>
+</footer>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function (event) {
-                navbarFixedTopAnimation();
-            });
-        </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        navbarFixedTopAnimation();
+    });
+</script>
 
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function (event) {
-                navActivePage();
-                scrollRevelation('.reveal');
-            });
-        </script>
-        <script type="text/javascript" src="js/main.0cf8b554.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        navActivePage();
+        scrollRevelation('.reveal');
+    });
+</script>
+<script type="text/javascript" src="js/main.0cf8b554.js"></script>
 </body>
 </html>

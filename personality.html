@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +51,7 @@
                     <li><a href="personality.html" title="">Personality Test</a></li>
                     <li>
                         <p>
-                            <a href="profile.html" class="btn btn-default navbar-btn" title="">Start journey</a>
+                            <a href="profile.html" class="btn btn-default navbar-btn" title="">Salary Analysis</a>
                         </p>
                     </li>
 
@@ -59,11 +60,124 @@
         </div>
     </nav>
 </header>
-<div class="container">
-<h1>Developing</h1>
-<h2>We're really working on it!</h2>
-<h3>Sorry, this section is currently under construction.</h3>
+
+
+
+<div class="section-container contact-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <div class="section-container-spacer">
+                    <h2 class="text-center">Personality Test</h2>
+                    <p class="text-center">Finish the test to see your personality</p>
+                </div>
+                <div class="card-container">
+                    <div class="card card-shadow col-xs-10 col-md-12">
+                        <form action="personality.php" method = "POST" class="reveal-content">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <br><h3 style="color:deepskyblue">1. Where do you tend to get strength from?</h3><br>
+                                        <label><input type="radio" name = "Q1"  value="extrovert">Other people<br>
+                                            <input type="radio" name = "Q1"  value="introvert">My own opinion</label>
+                                        <br><h3 style="color:deepskyblue">2. When you attend a social gathering, you will：</h3><br>
+                                        <label><input type="radio" name = "Q2"  value="extrovert">When the night is deep, once you start to get involved, you may be the last one to leave.<br>
+                                            <input type="radio" name = "Q2"  value="introvert">At the beginning of the night I'm tired and want to go home.</label>
+                                        <br><h3 style="color:deepskyblue">3. Which of the following things sounds more attractive to you?</h3><br>
+                                        <label><input type="radio" name = "Q3"  value="extrovert">Go with friends to a place with lots of people and lots of social activities.<br>
+                                            <input type="radio" name = "Q3"  value="introvert">Stay home and do something special with friends, like watching a fun video and enjoying your favorite takeaway food.</label>
+                                        <br><h3 style="color:deepskyblue">4. On a date, you usually：</h3><br>
+                                        <label><input type="radio" name = "Q4"  value="extrovert">Overall very talkative.<br>
+                                            <input type="radio" name = "Q4"  value="introvert">Be quiet and reserve until you feel comfortabl.</label>
+                                        <br><h3 style="color:deepskyblue">5. In the past, most of your friends of the opposite sex you met were：</h3><br>
+                                        <label><input type="radio" name = "Q5"  value="extrovert">At parties, nightclubs, at work, at leisure events, at conferences or when friends introduce me to their friends.<br>
+                                            <input type="radio" name = "Q5"  value="introvert">Personally, such as personal ads, video dates, or introductions from close friends and family.</label>
+                                        <br><h3 style="color:deepskyblue">6. You tend to have：</h3><br>
+                                        <label><input type="radio" name = "Q6"  value="extrovert">Many acquaintances and close friends.<br>
+                                            <input type="radio" name = "Q6"  value="introvert">Some very close friends and some acquaintances.</label>
+                                        <br><h3 style="color:deepskyblue">7. In the past, your friends and colleagues have tended to say to you：</h3><br>
+                                        <label><input type="radio" name = "Q7"  value="extrovert">Can't you just be quiet for a while?<br>
+                                            <input type="radio" name = "Q7"  value="introvert">Can you please come out of your world for a moment?</label>
+                                        <br><h3 style="color:deepskyblue">8. Which of the following methods do you prefer to collect information?</h3><br>
+                                        <label><input type="radio" name = "Q8"  value="intuitive">Your imagination and expectations of what might happen.<br>
+                                            <input type="radio" name = "Q8"  value="sensing">Your actual perception of the current situation.</label>
+                                        <br><h3 style="color:deepskyblue">9. You tend to believe：</h3><br>
+                                        <label><input type="radio" name = "Q9"  value="intuitive">Your intuition.<br>
+                                            <input type="radio" name = "Q9"  value="sensing">Your direct observation and existing experience.</label>
+                                        <br><h3 style="color:deepskyblue">10. When you are in a relationship, you tend to believe：</h3><br>
+                                        <label><input type="radio" name = "Q10"  value="intuitive">There is always room for improvement.<br>
+                                            <input type="radio" name = "Q10"  value="sensing">If it is not damaged, it will not be repaired.</label>
+                                        <br><h3 style="color:deepskyblue">11. When you feel comfortable about a date, you tend to talk about</h3><br>
+                                        <label><input type="radio" name = "Q11"  value="intuitive">The future, about the possibilities of improving or inventing things and life. For example, you might talk about a new scientific invention, or a better way to express your feelings.<br>
+                                            <input type="radio" name = "Q11"  value="sensing">Something practical, concrete, about the “here and now.” For example, you might talk about a great way to taste wine, or about a novel trip you're about to take.</label>
+                                        <br><h3 style="color:deepskyblue">12. You are this kind of person：</h3><br>
+                                        <label><input type="radio" name = "Q12"  value="intuitive">Like to look at the overall situation first.<br>
+                                            <input type="radio" name = "Q12"  value="sensing">Like to master the details first.</label>
+                                        <br><h3 style="color:deepskyblue">13. You are this type of person：</h3><br>
+                                        <label><input type="radio" name = "Q13"  value="intuitive">Rather than living in reality, it is better to live in imagination.<br>
+                                            <input type="radio" name = "Q13"  value="sensing">Rather than living in imagination, it is better to live in reality.",
+                                            "14.You usually：</label>
+                                        <br><h3 style="color:deepskyblue">14.You usually：</h3><br>
+                                        <label><input type="radio" name = "Q14"  value="intuitive">Tends to imagine a lot of things about an upcoming date.<br>
+                                            <input type="radio" name = "Q14"  value="sensing">I tend to imagine an upcoming date in a reserved way and just expect it to happen naturally.</label>
+                                        <br><h3 style="color:deepskyblue">15. You tend to make decisions like this：</h3><br>
+                                        <label><input type="radio" name = "Q15"  value="feeling">Follow your heart first, then your logic.<br>
+                                            <input type="radio" name = "Q15"  value="thinking">Follow your logic first, then your heart.</label>
+                                        <br><h3 style="color:deepskyblue">16. You tend to be more aware of：</h3><br>
+                                        <label><input type="radio" name = "Q16"  value="intuitive">When people need emotional support.<br>
+                                            <input type="radio" name = "Q16"  value="sensing">When people are illogical.</label>
+                                        <br><h3 style="color:deepskyblue">17. When breaking up with someone：</h3><br>
+                                        <label><input type="radio" name = "Q17"  value="intuitive">You often get stuck in your emotions and find it difficult to get out.<br>
+                                            <input type="radio" name = "Q17"  value="sensing">Although you may feel hurt, once you make up your mind, you will simply put aside the shadow of your past lover.</label>
+                                        <br><h3 style="color:deepskyblue">18. When interacting with a person, you tend to value：</h3><br>
+                                        <label><input type="radio" name = "Q18"  value="intuitive">Emotional Compatibility: Shows affection and is sensitive to your partner’s needs.<br>
+                                            <input type="radio" name = "Q18"  value="sensing">Intellectual Compatibility: Communicating important ideas; discussing and debating matters objectively.</label>
+                                        <br><h3 style="color:deepskyblue">19.When you don't agree with your lover's ideas：</h3><br>
+                                        <label><input type="radio" name = "Q19"  value="intuitive">You try your best to avoid hurting the other person's feelings; if it would hurt the other person, you won't say anything.<br>
+                                            <input type="radio" name = "Q19"  value="sensing">You usually speak without reservation and are forthright with your lover because what is right is right.</label>
+                                        <br><h3 style="color:deepskyblue">20. People who know you tend to describe you as：</h3><br>
+                                        <label><input type="radio" name = "Q20"  value="intuitive">Passionate and sensitive.<br>
+                                            <input type="radio" name = "Q20"  value="sensing">Logical and clear.</label>
+                                        <br><h3 style="color:deepskyblue">21. You regard most encounters with others as：</h3><br>
+                                        <label><input type="radio" name = "Q21"  value="intuitive">Friendly and important.<br>
+                                            <input type="radio" name = "Q21"  value="sensing">There is another purpose.</label>
+                                        <br><h3 style="color:deepskyblue">22. If you had the time and money and your friend invited you to go on vacation abroad and notified you until the day before, you would：</h3><br>
+                                        <label><input type="radio" name = "Q22"  value="judging">Must check your schedule first.<br>
+                                            <input type="radio" name = "Q22"  value="perceiving">Pack your bags immediately.</label>
+                                        <br><h3 style="color:deepskyblue">23. On first date：</h3><br>
+                                        <label><input type="radio" name = "Q23"  value="judging">If the person you made an appointment with comes late, you will be unhappy.<br>
+                                            <input type="radio" name = "Q23"  value="perceiving">Not caring at all because you yourself are often late.</label>
+                                        <br><h3 style="color:deepskyblue">24. You prefer：</h3><br>
+                                        <label><input type="radio" name = "Q24"  value="judging">Know the date's itinerary beforehand: where you're going, who's going to be there, how long you'll be there, how you're going to dress.<br>
+                                            <input type="radio" name = "Q24"  value="perceiving">Let the date happen naturally without too much advance planning.</label>
+                                        <br><h3 style="color:deepskyblue">25. The life you choose is full of：</h3><br>
+                                        <label><input type="radio" name = "Q25"  value="judging">Schedule and organization.<br>
+                                            <input type="radio" name = "Q25"  value="perceiving">Naturally occurring and resilient.</label>
+                                        <br><h3 style="color:deepskyblue">26. Which one is more common：</h3><br>
+                                        <label><input type="radio" name = "Q26"  value="judging">You show up on time while everyone else is late.<br>
+                                            <input type="radio" name = "Q26"  value="perceiving">Everyone else shows up on time and you are late.</label>
+                                        <br><h3 style="color:deepskyblue">27. Are you the kind of person who likes...：</h3><br>
+                                        <label><input type="radio" name = "Q27"  value="judging">Make up your mind and come to a final, positive conclusion.<br>
+                                            <input type="radio" name = "Q27"  value="perceiving">Broaden your options and keep gathering information.</label>
+                                        <br><h3 style="color:deepskyblue">28.You are this type of person：</h3><br>
+                                        <label><input type="radio" name = "Q28"  value="judging">Like to focus on one thing for a period of time until it is completed.<br>
+                                            <input type="radio" name = "Q28"  value="perceiving">Enjoy doing several things at once.</label>
+
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Your result here-></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-image col-xs-12" style="background-image: url('Images/MainBG.jpg')">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 </body>
 <footer class="footer-container white-text-container">
     <div class="container">
